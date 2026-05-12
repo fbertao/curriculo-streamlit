@@ -158,7 +158,7 @@ st.markdown("""
 Itaú • UFABC • Dados
 </p>
 
-Estagiária em Análise de Dados no Itaú • na área de débitos automáticos.  
+Estagiária em Análise de Dados no Itaú • Débitos Automáticos.  
 Estudante de Ciência e Tecnologia na **UFABC** .
 
 </div>
