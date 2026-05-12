@@ -183,7 +183,7 @@ with col2:
 with col3:
     st.link_button(
         "📄 Download CV",
-        "https://drive.google.com/file/d/1Sc7kObUhBdNrLJ-e5J9XKNk1Zdn2hiHA/view?usp=sharing",
+        "https://drive.google.com/file/d/1EmCJgnXyH5Wz_X9FjjthlOQLQWwtMy2E/view?usp=sharing",
         use_container_width=True
     )
 
@@ -195,7 +195,7 @@ st.divider()
 st.header("💼 Experiência — Itaú")
 
 st.write("""
-Estagiária na comunidade **Plataforma e Jornadas de Daily Baking**, como membro cross atendendo CORE DEBITOS - INTERFACES, CORE DEBITOS - EFETIVAÇÂO e DEBITOS EFICIENCIA.
+Estagiária na comunidade **Plataforma e Jornadas de Daily Baking**, como membro cross atendendo as Squads Recepção de Pagementos, Efetivação de Pagamentos e Torre de Prioridade de Pagamentos.
 Atuando no desenvolvimento e monitoramento de indicadores-chave, análise de volumetria e identificação de desafios em projetos de modernização da plataforma de débitos automáticos.
 
 Experiências com: Athena (SQL), S3, QuickSight, SageMaker (Python), Pacote Office
@@ -207,10 +207,12 @@ with st.expander("📊 HUB de Ocorrências", expanded=False):
 para acompanhamento de reclamações e identificação de oportunidades
 na visão cliente.**
 
-### Objetivos
-- Acompanhamento constante das reclamações.
-- Identificação de oportunidades de melhoria.
-- Eficiência na rotina de extração e divulgação.
+### Atividades
+- Criação de lógica (SQL) para o produto débito automático
+- Adição de linha de plataforma de débitos automáticos como filtro
+                
+### Impacto
+Identificação de oportunidades de melhoria, acompanhamento constante de reclamações e eficiência na rotina de extração e divulgação de informações relevantes para áreas parceiras.
 """)
 
 with st.expander("🗂️ Governança de Dados", expanded=False):
@@ -234,12 +236,13 @@ with st.expander("📈 Análise de Rejeições de Débitos", expanded=False):
 **Projeto analítico para identificação dos principais ofensores
 de rejeições de débitos e oportunidades de melhoria operacional.**
 
-### Entregas
+    
+### Atividades
 - Identificação dos principais motivos de rejeição
 - Levantamento dos produtos com maior incidência
 - Geração de insights para áreas parceiras
 
-### Resultado
+### Impacto
 Melhoria da eficiência analítica e maior confiabilidade
 nas análises operacionais.
 """)
@@ -249,13 +252,13 @@ with st.expander("🤖 Agente de IA para Documentação Técnica", expanded=Fals
 **Participação no desenvolvimento de um agente de IA voltado à
 centralização e consulta de documentações técnicas e operacionais.**
 
-### Contribuições
-- Alimentação da base de conhecimento
+### Atividades
+- Criação e alimentação da base de conhecimento
 - Organização de documentação técnica
 - Apoio ao treinamento do agente
 - Estruturação de informações para acesso rápido
 
-### Objetivo
+### Impacto
 Facilitar o acesso ao conhecimento para times
 técnicos, de dados e negócio.
 """)
@@ -265,7 +268,7 @@ with st.expander("⚙️ Modernização da Plataforma de Débitos", expanded=Fal
 **Participação em iniciativa de modernização operacional
 da plataforma de débitos automáticos.**
 
-### Responsabilidades
+### Atividades
 - Levantamento de dados volumétricos
 - Validação de cenários operacionais
 - Acompanhamento do ciclo de vida dos débitos
@@ -276,19 +279,27 @@ with st.expander("⚙️ Painel para acompanhamento de Modernização - Nova Efe
     st.markdown("""
 **Painel desenvolvido para acompanhamento diário dos porincipais indicadores do Nova Efetivação, proprocionando uma visão clara e objetiva da modernização.**
 
+### Atividades
+- Estudo de bases de dados e entendimento de indicadores-chave
+- Revisão de regras
+- Criação da base (SPEC) pra criação do painel
+- Painel V1 no QuickSight
+- Criação de uma visão histórica para acompanhamento da evolução da modernização
+                
 ### Benefícios
-- Principais visões de indicadores consolidados em um único local
-- Peridiocidade de atualização por **hora**
-- Acompanhamento da evolução da modernização.
+Principais visões de indicadores consolidados em um único local, peridiocidade de atualização por **hora** e acompanhamento da evolução da modernização.
 """)
 
 with st.expander("🧠 Modelo de Machine Learning para Classificação", expanded=False):
     st.markdown("""
-**Projeto em desenvolvimento para clustrização e classificação de reclamações de débitos automáticos.**
+**Projeto em desenvolvimento para clustrização e classificação de reclamações de débitos automáticos para identificação de problemas da plataforma.**
 
-### Abordagem
+### Atividades
 - NLP para clusterização de reclamações
 - Regressão Logística para classificação binária (plataforma e produtos de débitos)
+                
+### Impacto
+Visão clara sobre a origem dos principais problemas relacionados a débitos, otimização de tempo e redução de trabalho manual na análise de dores.
 """)
 
 st.divider()
@@ -351,4 +362,3 @@ with col4:
     st.metric("Machine Learning", "Básico")
 
 st.divider()
-
