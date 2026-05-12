@@ -253,7 +253,7 @@ with st.expander("🤖 Agente de IA para Documentação Técnica", expanded=Fals
 centralização e consulta de documentações técnicas e operacionais.**
 
 ### Atividades
-- Alimentação da base de conhecimento
+- Criação e alimentação da base de conhecimento
 - Organização de documentação técnica
 - Apoio ao treinamento do agente
 - Estruturação de informações para acesso rápido
