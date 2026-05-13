@@ -340,6 +340,23 @@ probabilística de ativos financeiros utilizando
 `Machine Learning`  
 `Time Series`
 """)
+    
+with st.expander("🎲 Data Lead - Green Team", expanded=False):
+    st.markdown("""
+**Coordenadora de dados na entidade estudantil GTHC**
+
+### Atividades
+- Aulas para iniciantes em dados (ferramentas, conceitos, carreiras, matemática)
+- Elaboração de atividades para fixação de conteúdo
+- Elaboração de projetos práticos.
+                
+""")
+    
+with st.expander("☁️ Tech Lead - AWS Cloud Club", expanded=False):
+    st.markdown("""
+**AWS Cloud Club é um programa oficial da AWS voltado para estuantes universitários que desejam mergulhar no mundo da computação em nuvem. Basicamente comunidades tecnológicas geridas por alunos para alunos**
+                
+""")
 
 st.divider()
 
