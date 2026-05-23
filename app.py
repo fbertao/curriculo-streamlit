@@ -201,19 +201,20 @@ st.markdown("<div style='height:40px'></div>", unsafe_allow_html=True)
 
 col1, col2 = st.columns(2)
 
+
 with col1:
-    st.page_link(
-        "pages/exp_itau.py",
-        label="💼 Ver Experiência Itaú",
+    if st.button(
+        "💼 Ver Experiência Itaú",
         use_container_width=True
-    )
+    ):
+        st.switch_page("pages/exp_itau.py")
 
 with col2:
-    st.page_link(
-        "pages/exp_academicas.py",
-        label="🔬 Projetos Acadêmicos",
+    if st.button(
+        "🔬 Projetos Acadêmicos",
         use_container_width=True
-    )
+    ):
+        st.switch_page("pages/exp_academicas.py")
 
 st.markdown("<br>", unsafe_allow_html=True)
 
