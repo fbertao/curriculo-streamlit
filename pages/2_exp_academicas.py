@@ -66,13 +66,26 @@ div[data-testid="stExpander"]:hover {
     border: 1px solid #EC7000 !important;
 }
 
-.streamlit-expanderHeader {
+/* título do expander */
+
+[data-testid="stExpander"] summary {
+
     color: #111827 !important;
     font-size: 18px !important;
     font-weight: 600 !important;
 }
+
+/* texto do header */
+
+[data-testid="stExpander"] summary * {
+    color: #111827 !important;
+}
             
 [data-testid="stExpanderDetails"] * {
+    color: #111827 !important;
+}
+            
+[data-testid="stExpander"] summary * {
     color: #111827 !important;
 }
 
