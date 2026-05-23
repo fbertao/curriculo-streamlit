@@ -13,156 +13,212 @@ st.set_page_config(
 st.markdown("""
 <style>
 
-/* ===== FUNDO GERAL ===== */
+/* ESCONDE SIDEBAR */
+
+[data-testid="stSidebar"] {
+    display: none;
+}
+
+[data-testid="collapsedControl"] {
+    display: none;
+}
+
+/* LAYOUT */
 
 [data-testid="stAppViewContainer"] {
     background: white !important;
 }
 
-.main {
-    background: white !important;
-}
-
-[data-testid="stHeader"] {
-    background: white !important;
-}
-
 .block-container {
-    background: white !important;
     padding-top: 2rem;
-    padding-left: 8rem;
-    padding-right: 8rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    max-width: 1200px;
 }
 
-/* ===== SIDEBAR ===== */
+/* HERO */
 
-section[data-testid="stSidebar"] {
-    background: #F8F9FB !important;
-}
+.hero-container {
 
-/* ===== TEXTO ===== */
+    background:
+    radial-gradient(
+        circle at top left,
+        rgba(236,112,0,0.12),
+        transparent 35%
+    ),
+    radial-gradient(
+        circle at top right,
+        rgba(0,59,92,0.08),
+        transparent 35%
+    ),
+    white;
 
-html, body {
-    background: white !important;
-    color: black !important;
-    font-family: Arial, sans-serif;
-}
-
-p, span, label, li, div {
-    color: black !important;
-}
-
-/* ===== TÍTULOS ===== */
-
-h1 {
-    color: #003B5C !important;
-    font-size: 56px !important;
-    font-weight: 700 !important;
-    margin-bottom: 0;
-}
-
-h2 {
-    color: #003B5C !important;
-}
-
-h3 {
-    color: black !important;
-}
-
-/* ===== HEADER ===== */
-
-.hero-box {
-    background: #F8F9FB;
     border: 1px solid #E5E7EB;
-    border-left: 8px solid #EC7000;
-    border-radius: 22px;
-    padding: 35px;
-    margin-bottom: 30px;
+    border-radius: 32px;
+
+    padding: 90px 60px;
+
+    text-align: center;
+
+    margin-top: 2rem;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.04);
 }
 
-.subtitle {
-    color: #475569 !important;
-    font-size: 20px;
+.hero-name {
+    font-size: 72px;
+    font-weight: 800;
+    color: #003B5C;
+    margin-bottom: 14px;
 }
 
-/* ===== BOTÕES ===== */
+.hero-subtitle {
+    font-size: 28px;
+    color: #374151;
+    margin-bottom: 10px;
+}
 
-.stLinkButton > a {
+.hero-company {
+    font-size: 18px;
+    color: #6B7280;
+    margin-bottom: 20px;
+}
+
+.hero-keywords {
+    font-size: 18px;
+    font-weight: 600;
+    color: #EC7000;
+    margin-bottom: 40px;
+}
+
+/* BOTÕES */
+
+.stButton > button,
+.stLinkButton > a,
+[data-testid="stPageLink-NavLink"] {
+
     background: white !important;
+    color: #111827 !important;
+
     border: 1px solid #E5E7EB !important;
-    border-radius: 14px !important;
-    color: black !important;
+    border-radius: 18px !important;
+
+    min-height: 55px;
+
+    font-weight: 600 !important;
+
+    box-shadow:
+    0 4px 12px rgba(0,0,0,0.04);
+
+    transition: all 0.2s ease;
+}
+
+/* TEXTO DOS PAGE LINKS */
+
+[data-testid="stPageLink-NavLink"] p {
+    color: #111827 !important;
     font-weight: 600 !important;
 }
 
-.stLinkButton > a:hover {
+/* HOVER */
+
+.stButton > button:hover,
+.stLinkButton > a:hover,
+[data-testid="stPageLink-NavLink"]:hover {
+
     border: 1px solid #EC7000 !important;
     color: #EC7000 !important;
+
+    transform: translateY(-2px);
 }
 
-/* ===== EXPANDERS ===== */
+/* MOBILE */
 
-.streamlit-expanderHeader {
-    color: black !important;
-    font-size: 18px !important;
-    font-weight: 600 !important;
-}
+@media (max-width: 768px) {
 
-div[data-testid="stExpander"] {
-    background: white !important;
-    border: 1px solid #D9D9D9 !important;
-    border-radius: 18px !important;
-    margin-bottom: 14px;
-    box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
-}
+    .block-container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
 
-div[data-testid="stExpander"]:hover {
-    border: 1px solid #EC7000 !important;
-}
+    .hero-container {
+        padding: 45px 22px;
+        border-radius: 24px;
+    }
 
-[data-testid="stExpanderDetails"] {
-    background: white !important;
-    color: black !important;
-}
+    .hero-name {
+        font-size: 38px;
+        line-height: 1.05;
+    }
 
-/* ===== METRICS ===== */
+    .hero-subtitle {
+        font-size: 18px;
+    }
 
-div[data-testid="stMetric"] {
-    background: white;
-    border: 1px solid #E5E7EB;
-    border-radius: 18px;
-    padding: 20px;
-    box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
-}
+    .hero-company {
+        font-size: 14px;
+    }
 
-/* ===== DIVIDER ===== */
-
-hr {
-    border: none;
-    border-top: 1px solid #E5E7EB;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    .hero-keywords {
+        font-size: 14px;
+        line-height: 1.7;
+    }
 }
 
 </style>
 """, unsafe_allow_html=True)
 
-# CABEÇALHO
+# ==================================================
+# HERO
+# ==================================================
 
 st.markdown("""
-<div class='hero-box'>
+<div class='hero-container'>
 
-# Fernanda Bertão
+<div class='hero-name'>
+Fernanda Bertão
+</div>
 
-<p class='subtitle'>
-Itaú • UFABC • Dados
-</p>
+<div class='hero-subtitle'>
+Estudante de Ciência e Tecnologia
+</div>
 
-Estagiária em Análise de Dados no Itaú • Débitos Automáticos.  
-Estudante de Ciência e Tecnologia na **UFABC** .
+<div class='hero-company'>
+UFABC • Itaú • Dados
+</div>
+
+<div class='hero-keywords'>
+Data Analytics | Machine Learning | SQL | Python | AWS
+</div>
 
 </div>
 """, unsafe_allow_html=True)
+
+# divisória 
+
+
+st.markdown("<div style='height:40px'></div>", unsafe_allow_html=True)
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.page_link(
+        "pages/1_exp_itau.py",
+        label="💼 Ver Experiência Itaú",
+        use_container_width=True
+    )
+
+with col2:
+    st.page_link(
+        "pages/2_exp_academicas.py",
+        label="🔬 Projetos Acadêmicos",
+        use_container_width=True
+    )
+
+st.markdown("<br>", unsafe_allow_html=True)
+
+# links
 
 col1, col2, col3 = st.columns(3)
 
@@ -183,199 +239,6 @@ with col2:
 with col3:
     st.link_button(
         "📄 Download CV",
-        "https://drive.google.com/file/d/1EmCJgnXyH5Wz_X9FjjthlOQLQWwtMy2E/view?usp=sharing",
+        "https://drive.google.com/file/d/1Sc7kObUhBdNrLJ-e5J9XKNk1Zdn2hiHA/view?usp=sharing",
         use_container_width=True
     )
-
-st.divider()
-
-# EXPERIÊNCIA
-
-
-st.header("💼 Experiência — Itaú")
-
-st.write("""
-Estagiária na comunidade **Plataforma e Jornadas de Daily Baking**, como membro cross atendendo as Squads Recepção de Pagementos, Efetivação de Pagamentos e Torre de Prioridade de Pagamentos.
-Atuando no desenvolvimento e monitoramento de indicadores-chave, análise de volumetria e identificação de desafios em projetos de modernização da plataforma de débitos automáticos.
-
-Experiências com: Athena (SQL), S3, QuickSight, SageMaker (Python), Pacote Office
-""")
-
-with st.expander("📊 HUB de Ocorrências", expanded=False):
-    st.markdown("""
-**Dashboard analítico desenvolvido em conjunto com times de dados
-para acompanhamento de reclamações e identificação de oportunidades
-na visão cliente.**
-
-### Atividades
-- Criação de lógica (SQL) para o produto débito automático
-- Adição de linha de plataforma de débitos automáticos como filtro
-                
-### Impacto
-Identificação de oportunidades de melhoria, acompanhamento constante de reclamações e eficiência na rotina de extração e divulgação de informações relevantes para áreas parceiras.
-""")
-
-with st.expander("🗂️ Governança de Dados", expanded=False):
-    st.markdown("""
-**Atualização da documentação de bases críticas
-utilizadas pelo time.**
-
-### Atividades
-- Mapeamento de atributos e campos
-- Levantamento de regras e tipos de dados
-- Atualização de documentação técnica
-- Atualização de De x Para de campos
-
-### Impacto
-Maior rastreabilidade, entendimento e confiabilidade
-das bases utilizadas nas análises.
-""")
-
-with st.expander("📈 Análise de Rejeições de Débitos", expanded=False):
-    st.markdown("""
-**Projeto analítico para identificação dos principais ofensores
-de rejeições de débitos e oportunidades de melhoria operacional.**
-
-    
-### Atividades
-- Identificação dos principais motivos de rejeição
-- Levantamento dos produtos com maior incidência
-- Geração de insights para áreas parceiras
-
-### Impacto
-Melhoria da eficiência analítica e maior confiabilidade
-nas análises operacionais.
-""")
-
-with st.expander("🤖 Agente de IA para Documentação Técnica", expanded=False):
-    st.markdown("""
-**Participação no desenvolvimento de um agente de IA voltado à
-centralização e consulta de documentações técnicas e operacionais.**
-
-### Atividades
-- Criação e alimentação da base de conhecimento
-- Organização de documentação técnica
-- Apoio ao treinamento do agente
-- Estruturação de informações para acesso rápido
-
-### Impacto
-Facilitar o acesso ao conhecimento para times
-técnicos, de dados e negócio.
-""")
-
-with st.expander("⚙️ Modernização da Plataforma de Débitos", expanded=False):
-    st.markdown("""
-**Participação em iniciativa de modernização operacional
-da plataforma de débitos automáticos.**
-
-### Atividades
-- Levantamento de dados volumétricos
-- Validação de cenários operacionais
-- Acompanhamento do ciclo de vida dos débitos
-- Monitoramento de indicadores da modernização
-""")
-
-with st.expander("⚙️ Painel para acompanhamento de Modernização - Nova Efetivação", expanded=False):
-    st.markdown("""
-**Painel desenvolvido para acompanhamento diário dos porincipais indicadores do Nova Efetivação, proprocionando uma visão clara e objetiva da modernização.**
-
-### Atividades
-- Estudo de bases de dados e entendimento de indicadores-chave
-- Revisão de regras
-- Criação da base (SPEC) pra criação do painel
-- Painel V1 no QuickSight
-- Criação de uma visão histórica para acompanhamento da evolução da modernização
-                
-### Benefícios
-Principais visões de indicadores consolidados em um único local, peridiocidade de atualização por **hora** e acompanhamento da evolução da modernização.
-""")
-
-with st.expander("🧠 Modelo de Machine Learning para Classificação", expanded=False):
-    st.markdown("""
-**Projeto em desenvolvimento para clustrização e classificação de reclamações de débitos automáticos para identificação de problemas da plataforma.**
-
-### Atividades
-- NLP para clusterização de reclamações
-- Regressão Logística para classificação binária (plataforma e produtos de débitos)
-                
-### Impacto
-Visão clara sobre a origem dos principais problemas relacionados a débitos, otimização de tempo e redução de trabalho manual na análise de dores.
-""")
-
-st.divider()
-
-# FORMAÇÃO
-st.header("🎓 Formação")
-
-st.subheader("UFABC — Universidade Federal do ABC")
-
-st.write("""
-Formação quantitativa com foco em:
-
-- Interdisciplinar em Ciências
-- Ciência de Dados
-- Matemática Aplicada
-""")
-
-st.divider()
-# PROJETOS ACADÊMICOS
-
-
-st.header("🔬 Projetos Acadêmicos")
-
-with st.expander("📈 TrendBot — Previsão de Ativos Financeiros", expanded=False):
-    st.markdown("""
-Projeto de **Iniciação Científica** voltado à previsão
-probabilística de ativos financeiros utilizando
-**séries temporais e machine learning**.
-
-### Desenvolvimento
-- Base de dados do Kaggle
-- Janela deslizante de 20 dias
-- Criação de alvo binário  
-(subiu ou não subiu)
-
-### Tecnologias
-`Python` `Pandas`  
-`Machine Learning`  
-`Time Series`
-""")
-    
-with st.expander("🎲 Data Lead - Green Team", expanded=False):
-    st.markdown("""
-**Coordenadora de dados na entidade estudantil GTHC**
-
-### Atividades
-- Aulas para iniciantes em dados (ferramentas, conceitos, carreiras, matemática)
-- Elaboração de atividades para fixação de conteúdo
-- Elaboração de projetos práticos.
-                
-""")
-    
-with st.expander("☁️ Tech Lead - AWS Cloud Club", expanded=False):
-    st.markdown("""
-**AWS Cloud Club é um programa oficial da AWS voltado para estuantes universitários que desejam mergulhar no mundo da computação em nuvem. Basicamente comunidades tecnológicas geridas por alunos para alunos**
-                
-""")
-
-st.divider()
-
-# SKILLS
-
-st.header("🛠️ Skills")
-
-col1, col2, col3, col4 = st.columns(4)
-
-with col1:
-    st.metric("SQL", "Intermediário")
-
-with col2:
-    st.metric("Outras ferramentas AWS", "Básico")
-
-with col3:
-    st.metric("Python", "Intermediário")
-
-with col4:
-    st.metric("Machine Learning", "Básico")
-
-st.divider()
