@@ -206,14 +206,14 @@ with col1:
         "💼 Ver Experiência Itaú",
         use_container_width=True
     ):
-        st.switch_page("exp_itau")
+        st.switch_page("pages/1_exp_itau.py")
 
 with col2:
     if st.button(
         "🔬 Projetos Acadêmicos",
         use_container_width=True
     ):
-        st.switch_page("exp_academicas")
+        st.switch_page("pages/2_exp_academicas.py")
 
 st.markdown("<br>", unsafe_allow_html=True)
 
