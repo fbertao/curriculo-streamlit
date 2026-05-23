@@ -1,6 +1,6 @@
 import streamlit as st
 
-# CONFIGURAÇÃO DA PÁGINA
+# config da página
 
 st.set_page_config(
     page_title="Fernanda Bertão",
@@ -8,7 +8,7 @@ st.set_page_config(
     layout="wide"
 )
 
-# CSS CUSTOMIZADO
+# CSS 
 
 st.markdown("""
 <style>
@@ -169,9 +169,8 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# ==================================================
-# HERO
-# ==================================================
+
+# hero
 
 st.markdown("""
 <div class='hero-container'>
@@ -204,14 +203,14 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.page_link(
-        "pages/1_exp_itau.py",
+        "pages/exp_itau.py",
         label="💼 Ver Experiência Itaú",
         use_container_width=True
     )
 
 with col2:
     st.page_link(
-        "pages/2_exp_academicas.py",
+        "pages/exp_academicas.py",
         label="🔬 Projetos Acadêmicos",
         use_container_width=True
     )
@@ -242,3 +241,77 @@ with col3:
         "https://drive.google.com/file/d/1Sc7kObUhBdNrLJ-e5J9XKNk1Zdn2hiHA/view?usp=sharing",
         use_container_width=True
     )
+
+# skills
+
+st.markdown(
+    "<div style='height:50px'></div>",
+    unsafe_allow_html=True
+)
+
+st.markdown("""
+<div style="
+text-align:center;
+font-size:20px;
+font-weight:700;
+color:#003B5C;
+margin-bottom:20px;
+">
+Skills
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div style="
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:12px;
+">
+
+<div style="
+padding:10px 18px;
+border-radius:999px;
+background:#EFF6FF;
+border:1px solid #D9E7FF;
+font-weight:600;
+color:#003B5C;
+">
+SQL • Intermediário
+</div>
+
+<div style="
+padding:10px 18px;
+border-radius:999px;
+background:#EFF6FF;
+border:1px solid #D9E7FF;
+font-weight:600;
+color:#003B5C;
+">
+Python • Intermediário
+</div>
+
+<div style="
+padding:10px 18px;
+border-radius:999px;
+background:#FFF4EB;
+border:1px solid #FFE2C5;
+font-weight:600;
+color:#EC7000;
+">
+AWS • Básico
+</div>
+
+<div style="
+padding:10px 18px;
+border-radius:999px;
+background:#FFF4EB;
+border:1px solid #FFE2C5;
+font-weight:600;
+color:#EC7000;
+">
+Machine Learning • Básico
+</div>
+
+</div>
+""", unsafe_allow_html=True)
