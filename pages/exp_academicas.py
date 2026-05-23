@@ -1,19 +1,16 @@
 import streamlit as st
 
-# config da pagina
+# config da página
 
 st.set_page_config(
     page_title="Projetos Acadêmicos",
     page_icon="🔬",
     layout="wide"
 )
-
 # CSS
 
 st.markdown("""
 <style>
-
-/* ESCONDE SIDEBAR */
 
 [data-testid="stSidebar"] {
     display: none;
@@ -23,7 +20,7 @@ st.markdown("""
     display: none;
 }
 
-/* FUNDO */
+/* fundo */
 
 [data-testid="stAppViewContainer"] {
     background: white !important;
@@ -36,7 +33,7 @@ st.markdown("""
     max-width: 1200px;
 }
 
-/* HEADER */
+/* header */
 
 .page-title {
     font-size: 52px;
@@ -51,7 +48,7 @@ st.markdown("""
     margin-bottom: 40px;
 }
 
-/* EXPANDERS */
+/* expanders */
 
 div[data-testid="stExpander"] {
     border: 1px solid #E5E7EB !important;
@@ -75,13 +72,16 @@ div[data-testid="stExpander"]:hover {
     font-weight: 600 !important;
 }
 
-/* TEXTO */
+/* texto */
 
-p, li, span, label, div {
+.stMarkdown p,
+.stMarkdown li,
+.stMarkdown span,
+.stMarkdown label {
     color: #111827 !important;
 }
 
-/* TAGS TECNOLOGIAS */
+/* techs */
 
 code {
     background: #EFF6FF !important;
@@ -93,24 +93,26 @@ code {
     font-size: 13px !important;
     font-weight: 600 !important;
 }
+            
+/* botões */
 
-/* SKILLS */
+.stButton > button {
 
-.skill-pill {
-    display: inline-block;
-    padding: 10px 18px;
-    margin: 8px;
+    background: white !important;
+    color: #111827 !important;
 
-    border-radius: 999px;
+    border: 1px solid #E5E7EB !important;
+    border-radius: 16px !important;
 
-    background: #EFF6FF;
-    color: #003B5C;
-
-    font-weight: 600;
-    border: 1px solid #D9E7FF;
+    min-height: 50px;
+    font-weight: 600 !important;
+}
+        
+.stButton > button * {
+    color: #111827 !important;
 }
 
-/* MOBILE */
+/* mobile */
 
 @media (max-width: 768px) {
 
@@ -130,11 +132,6 @@ code {
     .streamlit-expanderHeader {
         font-size: 15px !important;
     }
-
-    .skill-pill {
-        padding: 8px 14px;
-        font-size: 13px;
-    }
 }
 
 </style>
@@ -147,10 +144,8 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.page_link(
-    "app.py",
-    label="← Voltar para Home"
-)
+if st.button("← Voltar para Home"):
+    st.switch_page("app.py")
 
 st.markdown("""
 <div class='page-title'>
