@@ -71,6 +71,10 @@ div[data-testid="stExpander"]:hover {
     font-size: 18px !important;
     font-weight: 600 !important;
 }
+            
+[data-testid="stExpanderDetails"] * {
+    color: #111827 !important;
+}
 
 /* texto */
 
