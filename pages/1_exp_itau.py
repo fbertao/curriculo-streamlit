@@ -137,10 +137,8 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.page_link(
-    "app.py",
-    label="← Voltar para Home"
-)
+if st.button("← Voltar para Home"):
+    st.switch_page("app.py")
 
 st.markdown("""
 <div class='page-title'>
