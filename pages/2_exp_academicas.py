@@ -238,6 +238,8 @@ de operações**.
 `Machine Learning`
 `Time Series`
 `Deep Learning`
+
+artigo publicado no ICEIS2026: https://doi.org/10.5220/0014779600004018
 """)
 
 # GREEN TEAM

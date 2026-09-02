@@ -229,7 +229,7 @@ with col2:
 with col3:
     st.link_button(
         "📄 Download CV",
-        "https://drive.google.com/file/d/1Sc7kObUhBdNrLJ-e5J9XKNk1Zdn2hiHA/view?usp=sharing",
+        "https://drive.google.com/drive/u/1/folders/1nZVcQNFBef6IuTIUlan0PeTSj9Twz0Qf",
         use_container_width=True
     )
 
